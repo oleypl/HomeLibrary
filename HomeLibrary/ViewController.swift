@@ -41,28 +41,28 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-            searchingResults.removeAll()
-            
-            if(myLibrary == true){
-                searchFromMyBooks()
-            }else{
-                searchFromWWW()
-            }
-            searchLabel.text = ""
-        }
+        searchingResults.removeAll()
         
-        func searchFromMyBooks(){
-            if(searchLabel.text == "" || searchLabel.text == nil){
-                self.searchingResults = myBooks
-            }
-            else{
-                myBooks.forEach { item in
-                    if searchLabel.text == item.title{
-                        self.searchingResults.append(item)
-                    }
+        if(myLibrary == true){
+            searchFromMyBooks()
+        }else{
+            searchFromWWW()
+        }
+        searchLabel.text = ""
+    }
+    
+    func searchFromMyBooks(){
+        if(searchLabel.text == "" || searchLabel.text == nil){
+            self.searchingResults = myBooks
+        }
+        else{
+            myBooks.forEach { item in
+                if searchLabel.text == item.title{
+                    self.searchingResults.append(item)
                 }
             }
-            self.tableView.reloadData()
+        }
+        self.tableView.reloadData()
     }
     
     func saveDatas(book: Book, remove: Bool){
@@ -106,27 +106,19 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func startingGraphicSettings(){
         myBooksButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         wwwButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        menuBackground.layer.borderWidth = 0.15
+        menuBackground.layer.borderWidth = 0.19
         menuBackground.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-
-//        myBooksButton.layer.borderWidth = 5
-//        wwwButton.layer.borderWidth = 5
         myBooksButton.setTitleColor(.black, for: .normal)
         myBooksButton.layer.cornerRadius = 10
         wwwButton.layer.cornerRadius = 10
-//        searchLabel.backgroundColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
-//        searchLabel.tintColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
-//
-//        self.searchBar.barTintColor = .blue
-
-                myBooksButton.setTitleColor(.black, for: .normal)
-                wwwButton.setTitleColor(.white, for: .normal)
+        myBooksButton.setTitleColor(.black, for: .normal)
+        wwwButton.setTitleColor(.white, for: .normal)
     }
     
     @IBAction func myBooksAction(_ sender: Any) {
         searchLabel.text = ""
         selectedIndex = -1
-
+        
         myBooksButton.setTitleColor(.black, for: .normal)
         wwwButton.setTitleColor(.white, for: .normal)
         
@@ -143,15 +135,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
         selectedIndex = -1
         searchingResults.removeAll()
         self.tableView.reloadData()
-
+        
         myBooksButton.setTitleColor(.white, for: .normal)
         wwwButton.setTitleColor(.black, for: .normal)
         
-
+        
         myLibrary = false
     }
     
-
+    
     func searchFromWWW(){
         var isbn = ""
         if searchLabel != nil
@@ -196,7 +188,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = searchingResults[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell") as! BookCell
-
+        
         cell.bookTitleView.text = book.title
         if let address = book.image{
             cell.bookImageView.load(url: URL(string: address)!)
@@ -251,7 +243,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         self.indexPathTmp = indexPath
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
-    
 }
 
 extension ViewController: BookCellDelegate{
