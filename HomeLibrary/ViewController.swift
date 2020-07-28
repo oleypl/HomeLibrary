@@ -49,6 +49,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
             searchFromWWW()
         }
         searchLabel.text = ""
+        self.searchLabel.endEditing(true)
+
     }
     
     func searchFromMyBooks(){
@@ -118,7 +120,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBAction func myBooksAction(_ sender: Any) {
         searchLabel.text = ""
         selectedIndex = -1
-        
         myBooksButton.setTitleColor(.black, for: .normal)
         wwwButton.setTitleColor(.white, for: .normal)
         
@@ -135,11 +136,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
         selectedIndex = -1
         searchingResults.removeAll()
         self.tableView.reloadData()
-        
         myBooksButton.setTitleColor(.white, for: .normal)
         wwwButton.setTitleColor(.black, for: .normal)
-        
-        
         myLibrary = false
     }
     
