@@ -106,8 +106,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func startingGraphicSettings(){
         myBooksButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         wwwButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        menuBackground.layer.borderWidth = 0.19
-        menuBackground.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//        menuBackground.layer.borderWidth = 0.19
+//        menuBackground.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         myBooksButton.setTitleColor(.black, for: .normal)
         myBooksButton.layer.cornerRadius = 10
         wwwButton.layer.cornerRadius = 10
