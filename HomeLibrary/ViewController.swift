@@ -219,9 +219,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if self.selectedIndex == indexPath.row && isCollapce == true{
-            return 210
+            return 250
         }else{
-            return 100
+            return 110
         }
     }
     
