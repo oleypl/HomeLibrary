@@ -37,14 +37,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="93" id="9ka-Gj-dU4"/>
                                                         <constraint firstAttribute="width" constant="108" id="E59-Lz-foI"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="cR1-t2-EtK"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIC-Zz-Sr2">
-                                                    <rect key="frame" x="10" y="103" width="291" height="133"/>
+                                                    <rect key="frame" x="10" y="108" width="291" height="128"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="291" id="1hT-J6-cx2"/>
-                                                        <constraint firstAttribute="height" constant="106" id="Hlh-DN-x7J"/>
+                                                        <constraint firstAttribute="height" constant="128" id="Hlh-DN-x7J"/>
                                                     </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -103,7 +102,6 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="b0d-3g-aYQ" secondAttribute="trailing" constant="8" id="3zq-1U-L1d"/>
-                                                <constraint firstItem="jRu-9u-hfC" firstAttribute="bottom" secondItem="h48-7U-RaY" secondAttribute="bottom" id="6pc-gg-Zac"/>
                                                 <constraint firstItem="VPw-lO-BNK" firstAttribute="top" secondItem="h48-7U-RaY" secondAttribute="bottom" constant="105" id="8f2-Qa-YIW"/>
                                                 <constraint firstItem="jRu-9u-hfC" firstAttribute="top" secondItem="Ppy-fh-MA2" secondAttribute="topMargin" id="8vX-87-uVw"/>
                                                 <constraint firstItem="Ghg-1S-qzK" firstAttribute="bottom" secondItem="VPw-lO-BNK" secondAttribute="bottom" id="AmZ-42-YLY"/>
@@ -116,7 +114,7 @@
                                                 <constraint firstItem="Ghg-1S-qzK" firstAttribute="trailing" secondItem="VPw-lO-BNK" secondAttribute="trailing" id="cxa-tY-gGD"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="VPw-lO-BNK" secondAttribute="trailing" constant="-12" id="dEv-l1-gmU"/>
                                                 <constraint firstItem="b0d-3g-aYQ" firstAttribute="trailing" secondItem="h48-7U-RaY" secondAttribute="trailing" id="eyJ-mJ-HUa"/>
-                                                <constraint firstItem="uIC-Zz-Sr2" firstAttribute="top" secondItem="jRu-9u-hfC" secondAttribute="bottom" constant="-1" id="gSk-v0-G7V"/>
+                                                <constraint firstItem="uIC-Zz-Sr2" firstAttribute="top" secondItem="jRu-9u-hfC" secondAttribute="bottom" constant="4" id="gSk-v0-G7V"/>
                                                 <constraint firstItem="h48-7U-RaY" firstAttribute="top" secondItem="b0d-3g-aYQ" secondAttribute="bottom" constant="-7" id="jQL-4c-Yw9"/>
                                                 <constraint firstItem="b0d-3g-aYQ" firstAttribute="leading" secondItem="jRu-9u-hfC" secondAttribute="trailing" constant="8" id="kHb-5a-84I"/>
                                                 <constraint firstAttribute="trailing" secondItem="b0d-3g-aYQ" secondAttribute="trailing" constant="8" id="nzH-kS-lbG"/>
