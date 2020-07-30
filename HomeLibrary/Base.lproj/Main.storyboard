@@ -185,7 +185,17 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="1"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="camera" catalog="system"/>
+                                <connections>
+                                    <action selector="scannerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVO-Se-e2m"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barcode.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="i0f-9x-ouT">
+                                <rect key="frame" x="0.0" y="385" width="414" height="126"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128.5" id="xyw-As-VHd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -203,11 +213,14 @@
                             <constraint firstItem="37B-rt-y5Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="S2D-j1-Wfd"/>
                             <constraint firstItem="5Cx-bd-PLj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SlZ-8K-5Dg"/>
                             <constraint firstItem="iYd-mO-cAz" firstAttribute="top" secondItem="37B-rt-y5Q" secondAttribute="bottom" constant="8" id="VXe-d0-aAZ"/>
+                            <constraint firstItem="i0f-9x-ouT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z8A-zq-jw2"/>
                             <constraint firstItem="EZY-y0-sp1" firstAttribute="leading" secondItem="5Cx-bd-PLj" secondAttribute="leading" id="bb3-Rw-EQW"/>
+                            <constraint firstItem="i0f-9x-ouT" firstAttribute="trailing" secondItem="EZY-y0-sp1" secondAttribute="trailing" id="dXf-MM-O2t"/>
                             <constraint firstAttribute="bottomMargin" secondItem="EZY-y0-sp1" secondAttribute="bottom" constant="-34" id="e8a-so-U3K"/>
                             <constraint firstItem="XXZ-Gp-s8n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fuK-lN-C9A"/>
                             <constraint firstItem="XXZ-Gp-s8n" firstAttribute="leading" secondItem="5Cx-bd-PLj" secondAttribute="leading" id="q9g-xO-IaY"/>
                             <constraint firstItem="EZY-y0-sp1" firstAttribute="top" secondItem="5Cx-bd-PLj" secondAttribute="bottom" id="qsn-Y5-jx4"/>
+                            <constraint firstItem="i0f-9x-ouT" firstAttribute="leading" secondItem="EZY-y0-sp1" secondAttribute="leading" id="uoV-FJ-DGh"/>
                             <constraint firstItem="EZY-y0-sp1" firstAttribute="trailing" secondItem="XXZ-Gp-s8n" secondAttribute="trailing" id="xLu-T4-qGQ"/>
                             <constraint firstItem="37B-rt-y5Q" firstAttribute="baseline" secondItem="YKr-fm-6c9" secondAttribute="baseline" id="y5q-Uh-QBw"/>
                             <constraint firstItem="37B-rt-y5Q" firstAttribute="top" secondItem="XXZ-Gp-s8n" secondAttribute="bottom" constant="13" id="zcq-kK-8wy"/>
@@ -228,6 +241,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="barcode.viewfinder" catalog="system" width="128" height="114"/>
         <image name="camera" catalog="system" width="128" height="96"/>
     </resources>
 </document>
